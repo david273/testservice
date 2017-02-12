@@ -1,0 +1,8 @@
+{
+	"port": 8080,
+	"bodyLimit": "100kb",
+    "security": {
+        "user": "dev",
+        "password": "password"
+    }
+}

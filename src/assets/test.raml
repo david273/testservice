@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: Test Service
+version: v1
+securitySchemes:
+    basic:
+      type: Basic Authentication
+securedBy: basic
+
+/test:
+  description: Test endpoint
+
+  get:
+    responses:
+      200:

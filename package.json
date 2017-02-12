@@ -1,0 +1,50 @@
+{
+  "name": "test-api",
+  "version": "0.1.0",
+  "description": "Test service",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"eslint src && babel-node src\"",
+    "predev": "npm run security-check",
+    "share": "lt --port 3000",
+    "security-check": "nsp check",
+    "build": "babel src -s -D -d dist",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "lint": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "osprey": "mulesoft/osprey.git#raml1.0",
+    "pm2": "^2.3.0"
+  },
+  "devDependencies": {
+    "@octopusdeploy/gulp-octo": "^0.0.8",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.0",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-latest": "^6.22.0",
+    "eslint": "^3.1.1",
+    "nodemon": "^1.9.2",
+    "nsp": "^2.6.2",
+    "yargs": "^6.6.0"
+  }
+}
