@@ -20,7 +20,7 @@ Promise.all([
 
     // simple health check
     app.get('/', (req, res) => {
-        res.end('happy');
+        res.end('happy2');
     });
 
 	// api version 1
