@@ -20,7 +20,7 @@ Promise.all([
 
     // simple health check
     app.get('/', (req, res) => {
-        res.end('happy2');
+        res.end(process.env.JWT_KEY);
     });
 
 	// api version 1
